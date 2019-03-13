@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <script type="text/javascript" src="particles.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>
+            {{title}}
+        </title>
+    </head>
+
+    <body>
+        <!-- particles.js container --> <div id="particles-js"></div> <!-- stats - count particles --> 
+        <!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+        <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->
+        <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+        <script src="particleJS.js"></script>
+
+        <div class="header">
+            <div class="topbar">
+                <div class="toptext">Quiz-A-do</div>
+        </div>
+
+        <div class="main" id="main">
+
+            <div class="error">
+                {{error}}
+            </div>
+
+                <form action="/login" method="POST">
+
+                        <div class="form">
+    
+                            <div class="head">Welcome to the world of Quizzing!!</div>
+                
+                            <div class="admin_rad">
+                                <input type="radio" id="admin" name="acc_type" value="admin" checked>
+                                <label for="admin" class="rad_desc"> Administrator</label>
+                            </div>
+    
+                            <div class="partici_rad">
+                                <input type="radio" id="partici" name="acc_type" value="participant">
+                                <label for="partici" class="rad_desc">Participant</label>
+                            </div>
+    
+                            <div class="usr"><input type="text" placeholder="Username" class="holder" name="username" required autofocus></div>
+                            <div class="psw"><input type="password" placeholder="Password" class="holder" name="password" required></div>
+    
+                            <div class="log_btn"><button type="submit" class="login">Login</button></div>
+                    </form>
+
+                    <form action="/signup" method="GET">
+                                <div class="reg_btn"><button type="submit" class="reg">Sign Up</button></div>
+                    </form>
+    
+                        </div>
+                </form>
+
+        </div>
+
+        <div class="footer">
+            
+        </div>
+    </body>
+</html>
