@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css">
+</head>
+
+<body>
+        {% for q in question %}
+        <div class="question_populate1">
+        <div class="question_container{{loop.index}}">
+
+            <div class="question">{{q['id']}}.{{q['question']}}<input type="hidden" name="id{{loop.index}}" value="{{q['id']}}"></div>
+            <div class="options1">
+            <div class="opt1"><input type="radio" id="admin2" name="{{q['id']}}" value="{{q['option1']}}">
+            <label for="admin" class="rad_desc">{{q['option1']}}</label></div>
+
+            <div class="opt2"><input type="radio" id="admin2" name="{{q['id']}}" value="{{q['option2']}}">
+            <label for="admin" class="rad_desc">{{q['option2']}}</label></div>
+
+            <div class="opt3"><input type="radio" id="admin2" name="{{q['id']}}" value="{{q['option3']}}">
+            <label for="admin" class="rad_desc">{{q['option3']}}</label></div>
+
+            <div class="opt4"><input type="radio" id="admin2" name="{{q['id']}}" value="{{q['option4']}}">
+            <label for="admin" class="rad_desc">{{q['option4']}}</label></div>
+
+        </div>
+        </div>
+    </div>
+    
+    {% endfor %}
+</div>  
+    
+</body>
+</html>

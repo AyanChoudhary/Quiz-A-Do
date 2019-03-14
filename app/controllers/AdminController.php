@@ -3,6 +3,7 @@
     namespace Controllers;
     use Models\Session;
     use Models\Admin;
+    use Models\Users;
 
     class AdminController
     {
@@ -18,10 +19,12 @@
         {
             session_start();
             Session::sess_check_admin();
+            $question = Users::show_questions();
             echo $this->twig->render("admin.html",
             array(
                 "title" => "Admin",
-                "username" => $_SESSION['username']
+                "username" => $_SESSION['username'],
+                "question" => $question
             ));
         }
 
@@ -38,10 +41,12 @@
 
             Admin::question_upload($points, $question, $answer, $option1, $option2, $option3, $option4);
 
+            $question = Users::show_questions();
             echo $this->twig->render("admin.html",
             array(
                 "title" => "Admin",
-                "username" => $_SESSION['username']
+                "username" => $_SESSION['username'],
+                "question" => $question
             ));
         }
     }

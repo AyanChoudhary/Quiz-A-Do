@@ -14,6 +14,9 @@ body
     padding: 0px;
     margin: 0px;
     width: 100%;
+    background-image: url('back.png');
+    background-size: cover;
+    overflow-x: hidden;
 }
 
 .topbar
@@ -36,6 +39,7 @@ body
 {
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 .logout_btn
@@ -60,6 +64,11 @@ body
     cursor: pointer;
 }
 
+.logt_btn
+{
+    border: 0.25vh solid red;
+}
+
 .top_content
 {
     font-family: Dancing Script;
@@ -77,6 +86,15 @@ body
     text-align: center;
     font-weight: bold;
     margin-top: 4vh;
+    color: white;
+}
+
+.main
+{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+
 }
 
 .form
@@ -84,9 +102,26 @@ body
     width: 70vw;
     padding: 2vw;
 
+
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: auto;
+
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.question
+{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+iframe
+{
+    height: 70vh;
+    width: 30vw;
+    border: none;
 }
 
 .head
@@ -110,7 +145,14 @@ body
     caret-color: black;
     font-size: 1.25vw;
 
+    
     outline: none;
+}
+
+.textbox:focus, .answer:focus, .optn:focus
+{
+    box-shadow: 0vh 0vh 0vh 0.25vh black;
+    border: 0.15vw solid red;
 }
 
 .answer
@@ -216,6 +258,11 @@ body
     cursor: pointer;
 }
 
+.button:hover
+{
+    border: 1px solid red;
+}
+
 a
 {
     text-decoration: none;
@@ -225,4 +272,25 @@ a
 a:active :visited
 {
     color: black;
+}
+
+#admin1
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 1.75vh;
+    height: 1.75vh;
+
+    border: 0.20vh solid gray;
+    transition: 0.2s all ease-in;
+    outline: none;
+    margin-right: 0.25vw;box-shadow: 0vh 0vh 0vh 0.25vh black;
+    border: 0.15vw solid red;
+}
+
+#admin1:checked
+{
+    border: 0.50vh solid white;    
 }

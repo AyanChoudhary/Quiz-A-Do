@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="index.css">
 </head>
 <body>
+
+<div class="container">
 <div class="header">
 
             <div class="topbar">
@@ -32,7 +34,7 @@
 
                     {% for q in question %}
                             <div class="question_populate">
-                                <div class="question">{{q['id']}}.{{q['question']}}<input type="hidden" name="id{{loop.index}}" value="{{q['id']}}"></div>
+                                <div class="question">{{q['id']}}. {{q['question']}}<input type="hidden" name="id{{loop.index}}" value="{{q['id']}}"></div>
                                 <div class="options">
                                     <div class="opt1"><input type="radio" id="admin1" name="{{q['id']}}" value="{{q['option1']}}">
                                     <label for="admin" class="rad_desc">{{q['option1']}}</label></div>
@@ -53,10 +55,25 @@
 
                         <input type="hidden" name="usr_id" value="{{user_id}}">
 
-                        
-                            <div class="btn"><button type="submit" class="buttn"> Submit </button></div>
-                </form>
-            </div>
+                    </form>
+                </div>
+
+                            {% if solved == 0 %}
+                            
+                            <div class="btn">
+                                <form action="/user" method="POST">
+                                    <button type="submit" class="buttn"> Click<br>to<br>Submit </button>
+                                </form>
+                            </div>
+                            {% endif %}
+
+                            {% if solved != 0 %}
+                            <div class="frame">
+                                <iframe src="http://mvc.sdslabs.local/customLeaderboard"></iframe>
+                            </div>
+                            {% endif %}
+                
         </div>
+    </div>
 </body>
 </html>

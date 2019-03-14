@@ -9,6 +9,8 @@
         "/admin" => "Controllers\\AdminController",
         "/user" => "Controllers\\UserController",
         "/logout" => "Controllers\\LogoutController",
-        "/leaderboard" => "Controllers\\LeaderboardController"
+        "/leaderboard" => "Controllers\\LeaderboardController",
+        "/questions" => "Controllers\\QuestionController",
+        "/customLeaderboard" => "Controllers\\CustomLeaderboardController"
     ))
 ?>

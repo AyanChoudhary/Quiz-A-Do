@@ -18,6 +18,22 @@ body
     overflow: -moz-scrollbars-none;
 } 
 
+.container
+{
+    background-image: url('back.png');
+    background-size: contain;
+}
+
+.container_leaderboard
+{
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url('back.png');
+    background-size: cover;
+    color: white;
+}
+
 ::-webkit-scrollbar 
 { 
     display: none;
@@ -82,10 +98,17 @@ a:active :visited
     color: white;
 }
 
+a:hover
+{
+    text-decoration: underline;
+}
+
 .toptext
 {
     grid-row: 1 / span 1;
     grid-column: 1 / span 2;
+
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
 
 .logout_btn
@@ -97,6 +120,12 @@ a:active :visited
     width: 20vw;
 }
 
+.logt_btn:hover
+{
+    border: 0.25vh solid red;
+    box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 red;
+}
+
 .logt_btn
 {
     height: 5vh;
@@ -106,14 +135,19 @@ a:active :visited
     font-weight: bold;
     font-family: Kaushan Script;
     font-size: 2.5vh;
+    justify-self: center;
 
     align-content: center;
     cursor: pointer;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
 }
 
 .main
 {
     margin-top: 10vh;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 70% 30%;
 }
 
 .error
@@ -138,6 +172,34 @@ a:active :visited
     grid-template-rows: auto;
 }
 
+.form_fill
+{
+    color: white;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+}
+
+.frame
+{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+
+    position: fixed;
+    top: 35vh;
+    right: 1.5vw;
+    height: 100%
+
+
+}
+
+iframe
+{
+    border: none;
+    width: 30vw;
+    height: 100%;
+    color: white;
+}
+
 .head
 {
     font-family: Charm;
@@ -148,6 +210,8 @@ a:active :visited
     margin-bottom: 2vw;
     font-weight: bold;
     color: white;
+
+    text-shadow: 1px 1px 2px black, 0 0 25px red, 0 0 5px darkred;
 }
 
 .admin_rad
@@ -295,14 +359,26 @@ a:active :visited
     width: 12vw;
     height: 7vh;
     font-size: 1.5vw;
-    font-family: Pacifico;
+    font-family: Satisfy;
 }
 
 .btn
 {
-    width: 100%;
-    padding: 2vh;
-    text-align: center;
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+
+    position: fixed;
+    top: 35vh;
+    right: 10vw;
+
+    border: 0.25vh solid white;
+    box-shadow: 0 4px 8px 0 white, 0 6px 20px 0 white;
+}
+
+.btn:hover
+{
+    border: 0.25vh solid red;
+    box-shadow: 0 4px 8px 0 red, 0 6px 20px 0 red;
 }
 
 .buttn
@@ -310,8 +386,9 @@ a:active :visited
     background: black;
     color: white;
     border: none;
-    width: 50vw;
-    height: 5vh;
+    width: 5vw;
+    height: 30vh;
+    text-align: center;
 
     font-family: Pacifico;
     font-size: 2.5vh;
@@ -336,12 +413,12 @@ button
     border: 0.20vh solid gray;
     transition: 0.2s all ease-in;
     outline: none;
-    margin-right: 0.25vw;
+    margin-right: 0.25vw;  
 }
 
 #admin1:checked
 {
-    border: 0.50vh solid black;    
+    border: 0.50vh solid white;    
 }
 
 .question_populate
@@ -364,6 +441,15 @@ button
     padding: 2vh;
 }
 
+.leaderboard
+{
+    font-family: Lobster;
+    text-align: center;
+    font-size: 5vh;
+
+    padding: 2.5vw;
+}
+
 .hold
 {
     display: grid;
@@ -378,7 +464,7 @@ button
     justify-self: center;
     padding: 3vh;
 
-    font-family: Pacifico;
+    font-family: Satisfy;
     font-size: 4vh;
 }
 
@@ -389,7 +475,7 @@ button
     justify-self: center;
     padding: 3vh;
 
-    font-family: Pacifico;
+    font-family: Satisfy;
     font-size: 4vh;
 }
 
@@ -400,13 +486,13 @@ button
     justify-self: center;
     padding: 3vh;
 
-    font-family: Pacifico;
+    font-family: Satisfy;
     font-size: 4vh;
 }
 
 table
 {
-    width: 100%;
+    width: 93%;
     margin: auto;
 }
 
@@ -440,4 +526,41 @@ td
 .end
 {
     margin-right: 8vh;
+}
+
+#admin2
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 3.5vh;
+    height: 3.5vh;
+
+    border: 0.20vh solid gray;
+    transition: 0.2s all ease-in;
+    outline: none;
+    margin-right: 0.25vw;box-shadow: 0vh 0vh 0vh 0.25vh black;
+    border: 0.35vw solid red;
+}
+
+#admin2:checked
+{
+    border: 0.80vh solid white;    
+}
+
+.question_populate1
+{
+    padding: 4vh;
+    font-size: 5vh;
+    font-family: Kaushan Script;
+    color: white;
+    
+}
+
+.options1
+{
+    padding: 2vh;
+    font-size: 4.5vh;
+
 }

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Charm');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.hold
+{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto;
+
+    color: white;
+}
+
+.rank_1
+{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    padding: 3vh;
+
+    font-family: Satisfy;
+    font-size: 4vh;
+}
+
+.user_1
+{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    padding: 3vh;
+
+    font-family: Satisfy;
+    font-size: 4vh;
+}
+
+.pts_1
+{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    padding: 3vh;
+
+    font-family: Satisfy;
+    font-size: 4vh;
+}
+
+table
+{
+    width: 100%;
+    margin: auto;
+    color: white;
+}
+
+tbody
+{
+    margin-right: 16vh;
+    margin-left: 16vh;
+}
+
+tr
+{
+    text-align: center;
+    border-bottom: 0.25vh solid black;
+}
+
+td
+{
+    align-content: center;
+    font-family: Yanone Kaffeesatz;
+    font-size: 3.5vh;
+    padding: 1vh; 
+
+}
+
+.start
+{
+    margin-left: 8vh;
+}
+
+.end
+{
+    margin-right: 8vh;
+}

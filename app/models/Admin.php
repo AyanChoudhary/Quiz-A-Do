@@ -19,7 +19,7 @@
             $db = self::getDB();
 
             $addQues = $db->prepare("INSERT INTO Questions (points, question, answer, option1, option2, option3, option4) 
-            VALUES (:points, :question, :answer, :option1, :option2, :option3, :option3)");
+            VALUES (:points, :question, :answer, :option1, :option2, :option3, :option4)");
 
             $row = $addQues->execute(array(
                 ":points"=>$points,

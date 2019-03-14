@@ -21,6 +21,7 @@
             $question = Users::show_questions();
             $user_id = $_SESSION['usr_id'];
             $solved = $_SESSION['solved'];
+
             echo $this->twig->render("user.html",
             array(
                 "title" => "User",
