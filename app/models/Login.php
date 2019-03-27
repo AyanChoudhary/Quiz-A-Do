@@ -23,7 +23,7 @@
 
             if($role == "participant")
             {
-                $checkUser = $db->prepare("SELECT * FROM Users WHERE username='".$username."' AND password='".$password_hash."'");
+                $checkUser = $db->prepare("SELECT * FROM Users WHERE username=:username AND password=:password");
                 $checkUser->execute(array(
                     "username" => $username,
                     "password" => $password_hash
@@ -45,7 +45,7 @@
 
             else
             {
-                $checkUser = $db->prepare("SELECT * FROM Admin WHERE username='".$username."' AND password='".$password."'");
+                $checkUser = $db->prepare("SELECT * FROM Admin WHERE username=:username AND password=:password");
                 $checkUser->execute(array(
                     "username" => $username,
                     "password" => $password_hash

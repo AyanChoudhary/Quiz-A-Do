@@ -37,6 +37,7 @@
             session_start();
             $points = 0;
             $ids = preg_grep("/^id/", array_keys($_POST));
+
             foreach ($ids as $key => $id)
             {
                 $usr_id = $_POST['usr_id'];

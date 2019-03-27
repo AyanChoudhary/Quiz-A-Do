@@ -40,11 +40,9 @@
 					$addUser = $db->prepare("INSERT INTO Users (points, name, username, password, solved) 
 					VALUES ('0', :name, :username, :password_hash, '0')") ;
 					$row = $addUser->execute(array(
-						":points"=>'0',
-						":name"=>$name,
-						":username"=>$username,
-						":password_hash"=>$password_hash,
-						"solved"=>'0'
+						"name"=>$name,
+						"username"=>$username,
+						"password_hash"=>$password_hash
 					));
 					
 					return false;
